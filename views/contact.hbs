@@ -1,0 +1,75 @@
+{{>header}}
+<title>Foodies | Contact</title>
+{{>navbar}}
+<div class="container-fluid my-2 ">
+    <h5 class="text-center bg-secondary text-light py-2 mb-5">Contact Us</h5>
+
+  <div class="row ">
+    <div class="col-md-6 mb-3">
+
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/Images/p1.jpg" class="d-block w1" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/Images/p2.jpg" class="d-block w1" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/Images/p3.jpg" class="d-block w1" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-6 ">
+     {{#if show }}
+            <div class="alert alert-success text-center alert-dismissible fade show" role="alert">
+                Thanks to Share Your Feedback With US!!!! Our Team Will Contact You Soon!!!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
+
+      <form class="action=" /contact" method="post"">
+
+        <div class=" mb-3">
+        <input type="fullname" name="fullname" id="fullname" required placeholder="FullName :" class="form-control">
+    </div>
+    <div class="mb-3">
+      <input type="email" name="email" id="email" required placeholder="Email :" class="form-control">
+    </div>
+    <div class="mb-3">
+      <input type="phone" name="phone" id="phone" required placeholder="Phone No. :" class="form-control">
+    </div>
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupSelect01">Subject</label>
+      <select class="form-select" id="inputGroupSelect01" required>
+        <option value="1">Food?</option>
+        <option value="2">Delivery?</option>
+        <option value="3">Payment?</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <textarea name="message" id="message" rows="6" required placeholder="Enter Message" class="form-control">
+</textarea>
+    </div>
+
+    <div class="mb-3 d-flex">
+      <button type="reset" class="m-1 btn w-50 bg-danger text-light">Reset</button>
+      <button type="submit" class="m-1 btn w-50 bg-secondary text-light" >Submit</button>
+    </div>
+    </form>
+
+  </div>
+</div>
+</div>
+</div>
+{{>footer}}
